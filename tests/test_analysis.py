@@ -1,4 +1,5 @@
 import json
+
 import pytest
 
 from src.streamstats.analysis import analyze_events

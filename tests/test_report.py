@@ -1,4 +1,5 @@
 import json
+
 import pytest
 
 from src.streamstats.report import save_report

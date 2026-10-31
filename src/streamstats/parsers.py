@@ -1,16 +1,16 @@
 import csv
 import json
 from pathlib import Path
-from src.streamstats.models import parse_event
-from src.streamstats.errors import InvalidEventError, InvalidFormatError
 
+from src.streamstats.errors import InvalidEventError, InvalidFormatError
+from src.streamstats.models import parse_event
 
 
 def check_format(path, skip_invalid=False, skipped_stats=None):
 
     """"Проверяет формат файла,
     если формат не .csv или не .jsonl,
-    то выведет ошибку."""
+    то выводит ошибку."""
 
     format_file = Path(path).suffix.lower()
     if format_file == ".csv":

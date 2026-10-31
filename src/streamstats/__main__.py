@@ -1,16 +1,23 @@
 import argparse
 import sys
-import logging
-
-from pathlib import Path
-from zoneinfo import reset_tzpath
 
 from src.streamstats.analysis import analyze_events
-from src.streamstats.errors import StreamStatsError, InvalidFormatError, InvalidCLIConfigurationError
-from src.streamstats.parsers import execute
+from src.streamstats.errors import StreamStatsError
 from src.streamstats.report import save_report
 
+
 def main():
+
+    """Функция `main()` отвечает за запуск программы через командную строку.
+
+    Настраивает аргументы для выбора входных файлов, формата данных (`CSV` или `JSONL`),
+    пути сохранения отчёта и режима пропуска некорректных строк.
+
+    Запускает анализ файлов, передаёт результаты для сохранения в JSON.
+
+    При возникновении ошибок выводит сообщение в консоль и возвращает код завершения `2`,
+    при успешном выполнении — `0`."""
+
     parser = argparse.ArgumentParser(description="Поточный анализатор файлов")
     subparsers = parser.add_subparsers(dest="command",required=True)
     analyze = subparsers.add_parser("analyze")

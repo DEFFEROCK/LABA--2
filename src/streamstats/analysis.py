@@ -1,6 +1,19 @@
 from collections import Counter
+
 from src.streamstats.parsers import execute
+
+
 def analyze_events(paths, skip_invalid=False) -> dict:
+
+    """Функция выполняет анализ одного или нескольких входных файлов.
+
+    Подсчитывает общее количество событий, количество событий по уровням и источникам,
+    определяет топ-5 источников ошибок уровня ERROR и CRITICAL,
+    а также находит самую раннюю и самую позднюю временные отметки.
+
+    При параметре skip_invalid=True пропускает некорректные строки и подсчитывает их количество.
+    Возвращает словарь с результатами анализа."""
+
     total_events = 0
     skipped_stats = {"count": 0}
     level_counter = Counter()
