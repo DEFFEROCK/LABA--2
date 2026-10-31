@@ -1,0 +1,4 @@
+{"timestamp":"2026-10-28T10:00:00","level":"INFO","source":"payment","message":"Payment started"}
+{"timestamp":"2026-10-28T10:05:00","level":"ERROR","source":"database","message":"Connection failed"}
+{"timestamp":"2026-10-28T10:10:00","level":"WARNING","source":"auth","message":"Suspicious login attempt"}
+{"timestamp":"2026-10-28T10:15:00","level":"CRITICAL","source":"payment","message":"Payment service unavailable"}

@@ -1,0 +1,8 @@
+{"timestamp": "2026-10-28T09:00:00", "level": "INFO", "source": "auth", "message": "Пользователь вошёл"}
+{"timestamp": "2026-10-28T09:05:00", "level": "ERROR", "source": "database", "message": "Ошибка подключения"}
+{"timestamp": "2026-10-28T09:10:00", "level": "WARNING", "source": "api", "message": "Медленный ответ"}
+{"timestamp": "2026-10-28T09:15:00", "level": "CRITICAL", "source": "", "message": "База данных недоступна"}
+{"timestamp": "2026-10-28T09:20:00", "level": "DEBUG", "source": "auth", "message": "Проверка токена"}
+{"timestamp": "2026-10-28T09:25:00", "level": "ERROR", "source": "api", "message": "Ошибка запроса"}
+{"timestamp": "2026-10-28T09:30:00", "level": "INFO", "source": "worker", "message": "Задача завершена"}
+{"timestamp": "2026-10-28T09:35:00", "level": "ERROR", "source": "database", "message": "Тайм-аут запроса"}
